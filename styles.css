@@ -1,0 +1,55 @@
+@font-face {
+    font-family: 'Kanit';
+    src: url(./Kanit/Kanit-Regular.ttf);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Kanit', sans-serif;
+    box-sizing: border-box;
+    background-color: #f4f4f4;
+}
+
+.container {
+    width: 92%;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100%;
+    border: 2px solid black;
+}
+
+.thales-logo {
+    width: 150px;
+}
+
+.nav-bar {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    background-color: aquamarine;
+    height: 50px;
+}
+
+.menu-bar {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 30% ; 
+    height: 50px;
+}
+
+.menu-bar a {
+  color: #18183d; /* เปลี่ยนเป็นสีน้ำเงินสด */
+  text-decoration: none; /* เอาเส้นใต้ทิ้ง */
+}
+
+.menu-bar a:hover {
+  color: #3525db; /* เวลา hover เปลี่ยนสีม่วง */
+  text-decoration: underline;
+}
