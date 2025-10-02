@@ -17,11 +17,12 @@ body {
 .container {
     width: 92%;
     margin-top: 3rem;
-    margin-bottom: 3rem;
+    margin-bottom: none;
     margin-left: auto;
     margin-right: auto;
     height: 100%;
-    border: 2px solid black;
+    /* border: 2px solid black; */
+    border: none;
 }
 
 .thales-logo {
@@ -32,7 +33,7 @@ body {
     display: flex;
     justify-content: space-between;
     margin-bottom: 20px;
-    background-color: aquamarine;
+    background-color: rgba(14, 251, 251, 0.925);
     height: 50px;
 }
 
@@ -52,4 +53,46 @@ body {
 .menu-bar a:hover {
   color: #3525db; /* เวลา hover เปลี่ยนสีม่วง */
   text-decoration: underline;
+}
+.textbox h2{
+    margin-top: 10px;
+
+}
+.use-case{
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.use-case p{
+    display: flex;
+    flex-direction: column;
+    height: 50px;
+}
+.footer .container {
+    width: 92%;
+    margin-top: none;
+    margin-bottom: none;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid rgb(190, 187, 188);
+    border-width: 2px;
+    border-bottom: none;
+    border-right:none;
+    border-left: none;
+}
+
+.footer .thales-logo{
+    width: 150px;
+    margin-bottom: 40px;
+}
+.netpoleon-logo{
+    width: 170px;
+    margin-bottom: 20px
+}
+.footer-bar{
+    display: flex;
+    gap:none;
+}
+
+.footer-right p{
+    margin-top:30px;
 }
