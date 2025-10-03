@@ -55,13 +55,13 @@ function validateCreditcard() {
 }
 
 firstname.addEventListener("input",function (e){
-     let value = e.target.value.replace(/\d/g, ""); // ลบทุกอย่างที่เป็นตัวเลข
+     let value = e.target.value.replace(/[^A-Za-zก-๙\s'-]/g, ''); // ลบทุกอย่างที่เป็นตัวเลข
      e.target.value = value
 
 })
 
 lastname.addEventListener("input",function (e){
-     let value = e.target.value.replace(/\d/g, ""); // ลบทุกอย่างที่เป็นตัวเลข
+     let value = e.target.value.replace(/[^A-Za-zก-๙\s'-]/g, ''); // ลบทุกอย่างที่เป็นตัวเลข
      e.target.value = value
 })
 
