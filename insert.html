@@ -1,25 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Insert Data</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-<link rel="stylesheet" href="styles.css">
+
 <body>
-    <div class="container">
+    <div class="head-section">
         <nav class="nav-bar">
-                <div class="image"><img class="thales-logo" src="./Assets/Thales_LOGO_Pantone-1682075372118.webp" alt="Thales-logo"></div>
-                <div class="menu-bar">
-                        <a href="./index.html">Home</a>
-                        <a href="./insert.html">Insert</a>
-                        <a href="#">Authorized User</a>
-                        <a href="#">Customer service</a>
-                    
+            <div class="logo">
+                <a href="./index.html">
+                    <img class="thales-logo" src="./Assets/Thales_LOGO_Pantone-1682075372118.webp" alt="Thales-logo">
+                </a>
+            </div>
+
+            <div class="menu-bar">
+                <div class="home">
+                    <a href="./index.html">Home</a>
                 </div>
+                <div class="authorized-user">
+                    <a href="#">Authorized User</a>
+                </div>
+                <div class="customer-service">
+                    <a href="#">Customer service</a>
+                </div>
+            </div>
         </nav>
-        <div class="box">Insert Data</div>
+    </div>
+
+    <div class="input-form">
+
+        <div class="container">
+            <h1 class="title">Insert Data</h1>
+
+            <form id="form" class="form" action="/api/insert" method="POST">
+                <!-- First name -->
+                <label for="name">Name</label>
+                <input id="firstname" name="name" type="text" placeholder="Enter name" required>
+
+                <!-- Lastname -->
+                <label for="lastname">Lastname</label>
+                <input id="lastname" name="lastname" type="lastname" placeholder="Enter lastname" required>
+
+                <!-- Phone -->
+                <label for="phone">Phone</label>
+                <input id="phone" name="phone" type="text" pattern="0[0-9]{9}" placeholder="08xxxxxxxx" value="" required>
+
+                <!-- Creditcard No. -->
+                <label for="creditcard">Creditcard No.</label>
+                <input id="creditcard" name="creditcard" type="text" pattern="[0-9,-]{19}" placeholder="Creditcard No." 
+                    value="" required>
+
+                <!-- Submit button -->
+                <button type="submit">Insert</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="container">
+            <div class="footer-bar">
+                <div class="footer-left">
+                    <img class="thales-logo" src="./Assets/Thales_LOGO_Pantone-1682075372118.webp" alt="thales-logo">
+                    <img class="netpoleon-logo" src="./Assets/6463f53a1ce3e5ff7502edd6_netpoleon-logo.png"
+                        alt="netpoleon-logo">
+                </div>
+                <div class="footer-right">
+                    <p>© 2025 Netpoleon Thailand, Co., Ltd.</p>
+                </div>
+            </div>
+        </div>
     </div>
     <script src="app.js"></script>
+    
 </body>
+
 </html>

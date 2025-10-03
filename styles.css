@@ -8,14 +8,17 @@
     box-sizing: border-box;
 }
 
-body {
+้html, body {
     font-family: 'Kanit', sans-serif;
     box-sizing: border-box;
     background-color: #f4f4f4;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .container {
-    width: 92%;
+    width: 80%;
     margin-top: 3rem;
     margin-bottom: none;
     margin-left: auto;
@@ -23,6 +26,7 @@ body {
     height: 100%;
     /* border: 2px solid black; */
     border: none;
+    flex:1 0 auto;
 }
 
 .thales-logo {
@@ -67,6 +71,7 @@ body {
     flex-direction: column;
     height: 50px;
 }
+
 .footer .container {
     width: 92%;
     margin-top: none;
@@ -91,8 +96,68 @@ body {
 .footer-bar{
     display: flex;
     gap:none;
+    
 }
 
 .footer-right p{
     margin-top:30px;
+}
+
+/* insert page */
+
+/* กล่องฟอร์ม */
+.input-form .container {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  width: 400px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.title {
+  font-size: 1.5rem;
+  margin-bottom: 1.2rem;
+  text-align: center;
+  color: #333;
+}
+
+/* ฟอร์ม */
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form label {
+  margin-bottom: 0.4rem;
+  font-weight: 500;
+  color: #444;
+}
+
+.form input {
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  transition: border 0.3s;
+}
+
+.form input:focus {
+  border-color: #4facfe;
+  outline: none;
+}
+
+/* ปุ่ม */
+.form button {
+  background: #4facfe;
+  color: #fff;
+  padding: 0.7rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.form button:hover {
+  background: #0072ff;
 }
