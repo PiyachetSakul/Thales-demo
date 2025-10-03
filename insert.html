@@ -37,12 +37,12 @@
 
             <form id="form" class="form" action="/api/insert" method="POST">
                 <!-- First name -->
-                <label for="name">Name</label>
-                <input id="firstname" name="name" type="text" placeholder="Enter name" required>
+                <label for="firstname">Name</label>
+                <input id="firstname" name="firstname" type="text" placeholder="Enter name" required>
 
                 <!-- Lastname -->
                 <label for="lastname">Lastname</label>
-                <input id="lastname" name="lastname" type="lastname" placeholder="Enter lastname" required>
+                <input id="lastname" name="lastname" type="text" placeholder="Enter lastname" required>
 
                 <!-- Phone -->
                 <label for="phone">Phone</label>
@@ -50,7 +50,7 @@
 
                 <!-- Creditcard No. -->
                 <label for="creditcard">Creditcard No.</label>
-                <input id="creditcard" name="creditcard" type="text" pattern="[0-9,-]{19}" placeholder="Creditcard No." 
+                <input id="creditcard" name="creditcard" type="text" pattern="[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{4}" placeholder="Creditcard No." 
                     value="" required>
 
                 <!-- Submit button -->
