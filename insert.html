@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-api-base-url="http://localhost:3000/api">
 
 <head>
     <meta charset="UTF-8">
@@ -20,11 +20,14 @@
                 <div class="home">
                     <a href="./index.html">Home</a>
                 </div>
+                <div class="tokenized">    
+                    <a href="./tokenized.html">Tokenized</a>
+                </div>
                 <div class="authorized-user">
-                    <a href="#">Authorized User</a>
+                    <a href="./authorize-user.html">Authorized User</a>
                 </div>
                 <div class="customer-service">
-                    <a href="#">Customer service</a>
+                    <a href="./customer-service.html">Customer Service</a>
                 </div>
             </div>
         </nav>
@@ -35,7 +38,7 @@
         <div class="container">
             <h1 class="title">Insert Data</h1>
 
-            <form id="form" class="form" action="/api/insert" method="POST">
+            <form id="form" class="form" action="/api/users" method="POST" novalidate>
                 <!-- First name -->
                 <label for="firstname">Name</label>
                 <input id="firstname" name="firstname" type="text" placeholder="Enter name" required>
@@ -48,6 +51,10 @@
                 <label for="phone">Phone</label>
                 <input id="phone" name="phone" type="text" pattern="0[0-9]{9}" placeholder="08xxxxxxxx" value="" required>
 
+                <!-- ID Card -->
+                <label for="idcard">ID Card No.</label>
+                <input id="idcard" name="idcard" type="text" pattern="[0-9]{13}" inputmode="numeric" maxlength="13" placeholder="13-digit ID card number" value="" required>
+
                 <!-- Creditcard No. -->
                 <label for="creditcard">Creditcard No.</label>
                 <input id="creditcard" name="creditcard" type="text" pattern="[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{4}" placeholder="Creditcard No." 
@@ -55,6 +62,7 @@
 
                 <!-- Submit button -->
                 <button type="submit">Insert</button>
+                <p class="form-status" data-form-status hidden></p>
             </form>
         </div>
     </div>
