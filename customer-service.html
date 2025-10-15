@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" data-api-base-url="http://localhost:3000/api">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Service</title>
+</head>
+<link rel="stylesheet" href="styles.css">
+<script src="app.js"></script>
+<body>
+    <div class="head-section">
+        <nav class="nav-bar">
+            <div class="logo">
+                <a href="./insert.html">
+                    <img class="thales-logo" src="./Assets/Thales_LOGO_Pantone-1682075372118.webp" alt="Thales-logo" >
+                </a>
+            </div>
+            
+            <div class="menu-bar">
+                <div class="insert">    
+                    <a href="./insert.html">Insert</a>
+                </div>
+                <div class="tokenized">    
+                    <a href="./tokenized.html">Tokenized</a> 
+                </div>
+                <div class="authorized-user">
+                    <a href="./authorize-user.html">Authorized User</a>
+                </div>
+                <div class="customer-service">    
+                    <a href="#" aria-current="page">Customer Service</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+    
+
+    <section class="authorized-users-section">
+        <div class="container">
+            <div class="authorized-users-card"
+                data-users-config
+                data-api-path="/customer-service/users/detokenized"
+                data-auth-username="CustomerService_1"
+                data-auth-password="Thales123!"
+                data-fields="id,Firstname,Lastname,Phone,IDcard,Creditcard"
+                data-loading-text="Loading customer service records..."
+                data-empty-text="No customer service records found."
+                data-error-text="Unable to load customer service records. Please try again later."
+                data-debug="true">
+                <div class="authorized-users-header">
+                    <h2>Customer Service Records</h2>
+                    <button type="button" data-users-refresh>Refresh</button>
+                </div>
+                <p class="authorized-users-status" data-users-status hidden>Loading customer service records...</p>
+                <div class="table-wrapper">
+                    <table data-users-table>
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>First Name</th>
+                                <th>Last Name</th>
+                                <th>Phone</th>
+                                <th>ID Card</th>
+                                <th>Credit Card</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="footer">
+        <div class="container">
+            <div class="footer-bar">
+                <div class="footer-left">
+                    <img class="thales-logo" src="./Assets/Thales_LOGO_Pantone-1682075372118.webp" alt="thales-logo" >
+                    <img class="netpoleon-logo" src="./Assets/6463f53a1ce3e5ff7502edd6_netpoleon-logo.png" alt="netpoleon-logo">
+                </div>
+                <div class="footer-right">
+                    <p>Ac 2025 Netpoleon Thailand, Co., Ltd.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

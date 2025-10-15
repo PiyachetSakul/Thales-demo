@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thales Demo</title>
+    <title>Tokenized Users</title>
 </head>
 <link rel="stylesheet" href="styles.css">
+<script src="app.js"></script>
 <body>
     <div class="head-section">
         <nav class="nav-bar">
@@ -20,7 +21,7 @@
                     <a href="./insert.html">Insert</a>
                 </div>
                 <div class="tokenized">    
-                    <a href="./tokenized.html">Tokenized</a>
+                    <a href="#" aria-current="page">Tokenized</a>
                 </div>
                 <div class="authorized-user">
                     <a href="./authorize-user.html">Authorized User</a>
@@ -31,19 +32,42 @@
             </div>
         </nav>
     </div>
-    <div class="banner-section">
+    
+
+    <section class="authorized-users-section">
         <div class="container">
-            <div class="textbox">
-                <h1>Welcome to Thales Demo Application</h1>
-                <h2>This is for test tokenization </h2>
-                <div class="use-case">
-                    <p>Insert - for inserting the user data</p>
-                    <p>Authorized user - for show detokenized data </p>
-                    <p>Customer-service - for show the masked data</p>
+            <div class="authorized-users-card"
+                data-users-config
+                data-api-path="/users"
+                data-fields="id,Firstname,Lastname,Phone,IDcard,Creditcard"
+                data-loading-text="Loading tokenized users..."
+                data-empty-text="No tokenized entries found."
+                data-error-text="Unable to load tokenized users. Please try again later."
+                data-debug="true">
+                <div class="authorized-users-header">
+                    <h2>Tokenized Users</h2>
+                    <button type="button" data-users-refresh>Refresh</button>
+                </div>
+                <p class="authorized-users-status" data-users-status hidden>Loading tokenized users...</p>
+                <div class="table-wrapper">
+                    <table data-users-table>
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>First Name</th>
+                                <th>Last Name</th>
+                                <th>Phone</th>
+                                <th>ID Card</th>
+                                <th>Credit Card</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
     <div class="footer">
         <div class="container">
@@ -58,6 +82,6 @@
             </div>
         </div>
     </div>
-    <script src="app.js"></script>
+    
 </body>
 </html>
